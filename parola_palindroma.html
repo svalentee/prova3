@@ -1,0 +1,31 @@
+<!--Scrivi una funzione che prenda una parola come parametro e restituisca true se la parola è palindroma, altrimenti restituisca false.-->
+
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>La parola:  </h2>
+    <h3 id="palindroma"></h3>
+    <script>
+
+      function palindroma(string) {
+        let len = string.length;
+        for (let i = 0; i < len / 2; i++) {
+          if (string[i] !== string[len - 1 - i]) {
+            return 'non è palindroma '; 
+            }
+          }
+          return 'è palindroma';
+      }
+
+      let string = prompt("Scrivi una parola: ");
+      let value = palindroma(string);
+      document.getElementById("palindroma").innerText = value;
+
+    </script>
+  </body>
+</html>
